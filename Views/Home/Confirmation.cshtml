@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Confirmation";
+}
+<!--this is the confirm view-->
+@model JoelHiltonsMovieCollectionEdit.Models.Movies
+
+<div>
+    <h2>The movie will be added to the list</h2>
+    @if (Model.Title == "Independence Day")
+    {
+        @:Sorry, this is not the most American Moive ever made
+    }
+    else
+    {
+        @:You may view your input on the next page.
+    }
+</div>
+
+<div>
+    Click <a asp-action="MovieList">here</a> to see the list of movies. <br />
+    Click <a asp-action="MovieForm">here</a> to enter a new movie.
+</div>
